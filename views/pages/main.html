@@ -5,7 +5,8 @@
 				Reset
 			</button>
 		</div>
-		<div id="winningCongrats" class="mt-info" ng-show="won">*** Congrats, You won ${{winAmount}}! ***</div>
+		<div id="winningCongrats" class="mt-info" ng-show="won">*** Congrats, You won {{winAmount | currency}}! ***</div>
+		<div id="loss" class="mt-info" ng-show="lost">*** You lost {{lostAmount | currency}}! ***</div>
 		<div id="gameIsOver" class="mt-info" ng-show="!playerFunds">*** Game is over. Reset the funds. ***</div>
 		<div class="ribbons">
 			<truck ng-repeat="truckerIndex in truckerIndexes"

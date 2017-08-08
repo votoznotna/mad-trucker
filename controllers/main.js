@@ -12,7 +12,10 @@
       $scope.placeBetModal = false;
       $scope.editPlayerBet = false;
       $scope.won = false;
+      $scope.lost = false;
       $scope.winAmount = 0;
+      $scope.lostAmount = 0;
+
       $scope.truckerIndexes = _.range(SETTINGS.numberOfTruckers);
       $scope.playerFunds = SETTINGS.initialFunds;
       $scope.playerName = SETTINGS.playerName;
@@ -21,7 +24,9 @@
 
       function resetWinInfo() {
          $scope.won = false;
+         $scope.lost = false;
          $scope.winAmount = 0;
+         $scope.lostAmount = 0;
          if(!$scope.editPlayerBet) {
             $scope.playerBets = _.times(SETTINGS.numberOfTruckers, _.constant(0));
          }

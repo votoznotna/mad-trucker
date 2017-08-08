@@ -76,7 +76,7 @@ header {
     animation : winner 0.5s  linear 0.5s infinite alternate;
 }
 
-#winningCongrats, #gameIsOver {
+#winningCongrats, #gameIsOver, #loss {
     padding-bottom: 10px;
 }
 

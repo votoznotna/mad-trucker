@@ -37,6 +37,9 @@
                   if(winAmount > 0) {
                      scope.$parent.winAmount = winAmount;
                      scope.$parent.won = true;
+                  } else {
+                     scope.$parent.lostAmount = -winAmount;
+                     scope.$parent.lost = true;
                   }
                } else {
                   runTimeout();
