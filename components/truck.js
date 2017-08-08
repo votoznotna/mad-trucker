@@ -59,7 +59,7 @@
                scope.playerBet = getBet(bet);
             }, true);
 
-            scope.$watch('reset', function(value) {
+            scope.$watch('resetRun', function(value) {
                if(value) {
                   cleanUp();
                   $(element).find('i').css({'margin-left': 0});

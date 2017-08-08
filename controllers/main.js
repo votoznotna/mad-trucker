@@ -7,7 +7,7 @@
    function MainCtrl($scope, $window, $timeout, $state, CONSTANTS, SETTINGS) {
       $scope.truckColors = CONSTANTS.colors;
       $scope.progress = false;
-      $scope.reset = true;
+      $scope.resetRun = true;
       $scope.rideLength = 0;
       $scope.placeBetModal = false;
       $scope.editPlayerBet = false;
@@ -29,7 +29,7 @@
 
       $scope.onRun = function() {
          $scope.progress = true;
-         $scope.reset = false;
+         $scope.resetRun = false;
          $scope.editPlayerBet = false;
       }
 
@@ -39,13 +39,17 @@
 
       $scope.onPlaceBet = function() {
          resetWinInfo();
-         $scope.reset = true;
+         $scope.resetRun = true;
          $scope.editPlayerBet = true;
          $scope.placeBetModal = true;
       }
 
       angular.element($window).on('resize', function() {
          onWindowResize();
+         if(!$scope.editPlayerBet && !$scope.progress) {
+            resetWinInfo();
+            $scope.resetRun = true;
+         }
          return $scope.$apply();
       });
 
