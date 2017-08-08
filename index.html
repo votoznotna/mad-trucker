@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mad Trucker</title>
+
+	<!-- Style sheets -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.css" />
+
+</head>
+
+<body class="ng-cloak" ng-app="madTrucker">
+<div id="main" class="content">
+	<header>Mad Trucker</header>
+	<ui-view></ui-view>
+</div>
+<footer class="text-center clearfix">
+	<div class="box text-center">
+		<p>
+			Coding Exercise &#9679; 2017
+		</p>
+	</div>
+</footer>
+
+<!-- Library Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.20/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
+
+<!-- Application Script -->
+<script src="./app.js"></script>
+<script src="./routes.js"></script>
+<!-- Services -->
+<script src="./services/constants.js"></script>
+<script src="./services/settings.js"></script>
+<script src="./services/run.js"></script>
+<!-- Controllers -->
+<script src="./controllers/main.js"></script>
+<script src="./controllers/setup.js"></script>
+<!-- Directives -->
+<script src="./components/truck.js"></script>
+<script src="./components/player-bets.js"></script>
+<script src="./components/numeric-mask.js"></script>
+
+</body>
+
+</html>

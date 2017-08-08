@@ -1,0 +1,35 @@
+<div ng-controller="MainCtrl">
+	<div id="main" class="mt-container">
+		<div id="reset" class="buttons">
+			<button type="button" class="btn btn-default" ng-click="onReset()">
+				Reset
+			</button>
+		</div>
+		<div id="winningCongrats" class="mt-info" ng-show="won">*** Congrats, You won ${{winAmount}}! ***</div>
+		<div id="gameIsOver" class="mt-info" ng-show="!playerFunds">*** Game is over. Reset the funds. ***</div>
+		<div class="ribbons">
+			<truck ng-repeat="truckerIndex in truckerIndexes"
+			        color="truckColors[truckerIndex]"
+			        name="truckerIndex+1"
+			        bet="playerBets[truckerIndex]"
+			        class="ribbon">
+			</truck>
+		</div>
+		<div class="buttons">
+			<button type="button" class="btn btn-default" ng-disabled="progress || !playerFunds" ng-click="onPlaceBet()">
+				<i class="fa fa-clock-o"></i> Place Bet
+			</button>
+			<button type="button" class="btn btn-default" ng-click="onRun()" ng-disabled="!enableRunButton">
+				<i class="fa fa-clock-o" aria-hidden="true"></i> Start Race
+			</button>
+		</div>
+		<div id="playerFunds">
+			<label> {{playerFunds | currency}}</label>
+			<div id="player">
+				<i class="col-md-12 fa fa-user-secret"></i>
+				<label class="col-md-12">{{playerName}}</label>
+			</div>
+		</div>
+	</div>
+	<player-bets></player-bets>
+</div>

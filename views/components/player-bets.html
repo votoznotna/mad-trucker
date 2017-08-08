@@ -1,0 +1,23 @@
+<div class="mt-modal" ng-show="placeBetModal">
+	<div class="mt-modal-content container">
+		<header>Place Bet</header>
+		<div class="form-horizontal truckers">
+			<div class="form-group" ng-repeat="truckerIndex in truckerIndexes" >
+				<label class="col-xs-6 control-label capitalizeWord">Trucker {{truckerIndex + 1}} ({{truckColors[truckerIndex]}})</label>
+				<div class="col-xs-5 col-xs-1-offset">
+					<input type="number" min="0" id="tracker{{truckerIndex + 1}}" numeric-mask ng-model="bets[truckerIndex]" class="input-dollars form-control" placeholder="0">
+				</div>
+			</div>
+		</div>
+
+		<div id="fundsExceedingError" class="mt-error" ng-show="fundsExceeding">Exceeded available funds for ${{fundsExceedingAmount}}.</div>
+		<div class="buttons">
+			<button type="button" class="btn btn-default" ng-click="onBet()">
+				Bet
+			</button>
+			<button type="button" class="btn btn-default" ng-click="onCancelBet()">
+				Cancel
+			</button>
+		</div>
+	</div>
+</div>
