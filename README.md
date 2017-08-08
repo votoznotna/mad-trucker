@@ -1,4 +1,7 @@
 # mad-trucker
+
+## Runtime: https://mad-trucker.herokuapp.com.
+
 For usage without web server, just open index.html file in any browser.
 
 If cannot be open because of security restrictions (on Windows, for example):
