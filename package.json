@@ -1,0 +1,27 @@
+{
+  "name": "mad-trucker",
+  "version": "1.0.0",
+  "description": "Racing applcation",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/votoznotna/mad-trucker.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "Anton Zotov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/votoznotna/mad-trucker/issues"
+  },
+  "dependencies": {
+    "connect": "latest",
+    "forever": "latest",
+    "serve-static": "latest"
+  },
+  "homepage": "https://github.com/votoznotna/mad-trucker#readme"
+}
