@@ -17,19 +17,16 @@
                }
                return 0;
             }
-
             function ingnoreInput (event) {
                event.stopPropagation();
                event.preventDefault();
             }
-
             elem.bind('paste', function(event) {
                var value = event.originalEvent.clipboardData.getData('Text');
                if(!/^[\d,]+$/.test(value)){
                   ingnoreInput(event);
                }
             })
-
             elem.bind("keydown", function(event) {
                if (event.keyCode in pasteMap) {
                   pasteMap[event.keyCode] = true;
@@ -66,13 +63,11 @@
                   ingnoreInput(event);
                }
             });
-
             elem.bind("keyup", function(event) {
                if (event.keyCode === 86 || event.keyCode === 91) {
                   pasteMap[event.keyCode] = false;
                }
             });
-
          }
       };
    });

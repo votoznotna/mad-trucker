@@ -27,7 +27,6 @@
                   scope.bets = scope.playerBets.slice();
                }
             });
-
             function fundsExceedingAmount() {
                var setAmount =  _.reduce(scope.bets, function(sum, item) { if(item) { sum += item;} return sum; }, 0);
                return setAmount - scope.playerFunds;

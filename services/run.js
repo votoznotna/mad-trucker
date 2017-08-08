@@ -10,19 +10,9 @@
          max = Math.floor(max);
          return Math.floor(Math.random() * (max - min + 1)) + min;
       }
-
-      var getWinner = function () {
-
-
-         return '';
-      };
-
-      // Define the functions and properties to reveal.
       var service = {
-         getWinner: getWinner,
          getPixels: getPixels
       };
-
       return service;
    }]);
 

@@ -93,7 +93,6 @@ header {
     animation: shake 0.82s  ease-in-out 0.1s infinite alternate;
 }
 
-
 @keyframes winner {
     20% {
         transform: translate(0, 1px) rotateY(180deg);
@@ -268,9 +267,11 @@ footer {
     padding-left: 0px;
     padding-right: 0px;
 }
+
 footer .box {
     margin: 0 auto;
 }
+
 footer .box p {
     height: 15px;
     font-size: 0.8em;

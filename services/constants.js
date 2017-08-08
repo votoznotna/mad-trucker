@@ -13,5 +13,4 @@
          timeout: 100 // msecs
       }
    })
-
 }(angular.module('madTrucker')));

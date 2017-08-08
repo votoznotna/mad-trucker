@@ -16,7 +16,6 @@
             function getBet(value) {
                return value ? '$' + value : '';
             }
-
             function betResults(winAmount) {
                var initFunds = scope.$parent.playerFunds;
                var placedBets = _.reduce(scope.playerBets, function(sum, item) { if(item) { sum += item;} return sum; }, 0);
@@ -26,7 +25,6 @@
                scope.$parent.playerFunds -= placedBets;
                return scope.$parent.playerFunds - initFunds;
             }
-
             function changeTruckPath() {
                path += run.getPixels();
                if(path >= scope.rideLength - truckLengh) {
@@ -46,7 +44,6 @@
                }
                $(element).find('i').css({'margin-left': path});
             }
-
             scope.$watch('progress', function(value) {
                if(value) {
                   path = 0;
@@ -56,25 +53,20 @@
                   cleanUp();
                }
             });
-
             scope.$watch('playerBets', function(value) {
                bet = scope.playerBets[scope.truckIndex];
                scope.playerBet = getBet(bet);
             }, true);
-
             scope.$watch('resetRun', function(value) {
                if(value) {
                   cleanUp();
                   $(element).find('i').css({'margin-left': 0});
                }
             });
-
-
             function runTimeout() {
                cleanUp();
                timeoutPromise = $timeout(changeTruckPath, CONSTANTS.ride.timeout);
             }
-
             function cleanUp () {
                if (timeoutPromise){
                   $timeout.cancel(timeoutPromise);
@@ -83,8 +75,6 @@
             scope.$on('$destroy', function() {
                cleanUp();
             });
-
-
          },
          templateUrl: 'views/components/truck.html'
       }

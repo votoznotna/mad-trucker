@@ -31,24 +31,20 @@
             $scope.playerBets = _.times(SETTINGS.numberOfTruckers, _.constant(0));
          }
       }
-
       $scope.onRun = function() {
          $scope.progress = true;
          $scope.resetRun = false;
          $scope.editPlayerBet = false;
       }
-
       $scope.onReset = function() {
          $state.go('setup');
       }
-
       $scope.onPlaceBet = function() {
          resetWinInfo();
          $scope.resetRun = true;
          $scope.editPlayerBet = true;
          $scope.placeBetModal = true;
       }
-
       angular.element($window).on('resize', function() {
          onWindowResize();
          if(!$scope.editPlayerBet && !$scope.progress) {
@@ -57,22 +53,17 @@
          }
          return $scope.$apply();
       });
-
       var onWindowResize = _.debounce(function() {
          $scope.rideLength = getPathLength();
       }, 500);
-
-      onWindowResize();
-
       $scope.$on('$destroy', function () {
          angular.element($window).off('resize', onWindowResize);
       });
-
       function getPathLength() {
          var pathLength = $('.ribbon').eq(0).width();
          return pathLength;
       }
 
+      onWindowResize();
    }
-
 }(angular.module("madTrucker")));

@@ -18,7 +18,6 @@
          selectedNumberOfTrackers = value;
          $scope.selectedNumberOfTrackersLabel = value;
       }
-
       $scope.submitForm = function () {
          SETTINGS.playerName = $scope.playerName;
          SETTINGS.initialFunds =  $scope.initialFunds;
