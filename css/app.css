@@ -151,7 +151,7 @@ header {
 
 #setupFormContainer {
     position: relative;
-    width: 80%;
+    max-width: 500px;
     margin: 0 auto;
     padding: 0;
     border: 1px solid black;
@@ -159,6 +159,7 @@ header {
 
 #setupFormContainer form {
     margin-top: 20px;
+    padding: 0 10px;
 }
 
 #setupFormContainer header {

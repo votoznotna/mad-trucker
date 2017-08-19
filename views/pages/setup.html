@@ -3,7 +3,7 @@
 		<header>Game Setup</header>
 		<form  name="setupForm" ng-submit="submitForm()" class="form-horizontal">
 			<div class="form-group" ng-class="{ 'has-error' : setupForm.playerName.$invalid && !setupForm.playerName.$pristine }">
-				<label for="playerName" class="col-xs-4 control-label">Player name</label>
+				<label for="playerName" class="col-xs-5 control-label">Player name</label>
 				<div class="col-xs-6">
 					<input type="text" class="form-control" id="playerName" name='playerName' ng-model="playerName" placeholder="Player name" required>
 					<p ng-show="setupForm.playerName.$invalid && !setupForm.playerName.$pristine" class="help-block">Player name is required</p>
@@ -11,7 +11,7 @@
 			</div>
 
 			<div class="form-group">
-				<label for="playerName" class="col-xs-4 control-label">Number of truckers</label>
+				<label for="playerName" class="col-xs-5 control-label">Number of truckers</label>
 				<div class="col-xs-6">
 					<div class="dropdown">
 						<button class="btn btn-default dropup-toggle" type="button" id="numberOfTruckers" data-toggle="dropdown">
@@ -26,7 +26,7 @@
 			</div>
 
 			<div id="form-funds" class="form-group" ng-class="{ 'has-error' : setupForm.initialFunds.$invalid && !setupForm.initialFunds.$pristine }">
-				<label for="initialFunds" class="col-xs-4 control-label">Inital funds</label>
+				<label for="initialFunds" class="col-xs-5 control-label">Inital funds</label>
 				<div class="col-xs-6">
 					<input type="number" min="1" max="{{maxFunds}}" class="form-control" id="initialFunds" numeric-mask name="initialFunds" maxlength="10" ng-model="initialFunds" placeholder="Initial funds" required>
 					<p ng-show="setupForm.initialFunds.$invalid && !setupForm.initialFunds.$pristine" class="help-block">Funds are required not exceeding {{maxFunds | currency}} </p>
