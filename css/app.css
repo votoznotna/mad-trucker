@@ -3,9 +3,14 @@ body {
 }
 
 header {
-    margin-top: 10px;
+    position: fixed;
+    margin-top: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
     font-size: 24px;
     text-align: center;
+    z-index: 10;
     border-bottom: 1px solid black;
 }
 .fa-truck {
@@ -132,12 +137,12 @@ header {
 }
 
 .mt-container{
-    top: 50%;
+    top: 100px;
     left: 50%;
     margin: auto;
     position: absolute;
     width: 80%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
 }
 
 .ribbons {
@@ -152,7 +157,7 @@ header {
 #setupFormContainer {
     position: relative;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 0;
     border: 1px solid black;
 }
@@ -163,6 +168,7 @@ header {
 }
 
 #setupFormContainer header {
+    position: relative;
     font-size: 20px;
     padding: 2px 5px 10px;
 }
@@ -236,7 +242,7 @@ header {
 }
 
 .truckers {
-   padding-top: 15px;
+   padding-top: 55px;
 }
 
 .truckers label {
@@ -267,6 +273,7 @@ footer {
     left: 0;
     padding-left: 0px;
     padding-right: 0px;
+    background-color: white;
 }
 
 footer .box {
